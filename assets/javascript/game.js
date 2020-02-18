@@ -41,19 +41,21 @@ $(document).ready(function(){
 function gem1(){
     if (score < randomNumber){
         score = score + gem1Value;
+        $('#score').text(score);
+        audioElementGem.play();
 
     } else if (score === randomNumber) {
         gameWin();
     } else {
         gameLose();
     }
-    console.log(gem1Value);
 }
 
 function gem2(){
-    console.log(gem2Value);
     if (score < randomNumber){
         score = score + gem2Value;
+        $('#score').text(score);
+        audioElementGem.play();
 
     } else if (score === randomNumber) {
         gameWin();
@@ -63,9 +65,10 @@ function gem2(){
 }
 
 function gem3(){
-    console.log(gem3Value);
     if (score < randomNumber){
         score = score + gem3Value;
+        $('#score').text(score);
+        audioElementGem.play();
 
     } else if (score === randomNumber) {
         gameWin();
@@ -75,9 +78,10 @@ function gem3(){
 }
 
 function gem4(){
-    console.log(gem4Value);
     if (score < randomNumber){
         score = score + gem4Value;
+        $('#score').text(score);
+        audioElementGem.play();
 
     } else if (score === randomNumber) {
         gameWin();
@@ -97,25 +101,26 @@ function gameStart(){
     $('#win').text(win);
     $('#loss').text(loss);
     $('#gamesPlayed').text(gamesPlayed);
-    console.log("start");
 }
 
-// function gameWin() {
+function gameWin() {
+    audioElementWin.play();
+    win++;
+    gamesPlayed++;
+    reset();
+    
+}
 
-// }
-
-// function gameLose(){
-
-// }
+function gameLose(){
+    audioElementLoss.play();
+    loss++;
+    gamesPlayed++;
+    reset();
+}
 
 function reset(){
-    console.log("reset");
     score = 0;
-    randomNumber = 0;
-    gem1Value = 0;
-    gem2Value = 0;
-    gem3Value = 0;
-    gem4Value = 0;
+    gameStart();
 }
 
 function pickRandom(min, max){
@@ -128,21 +133,21 @@ function pickRandom(min, max){
 // - [x] At the start of the game a random number will be shown 
 // - [x] Player will click a crystal
 // - [x] Crystal will be worth a certain amount of points
-// - [ ] points are added to the players total score
+// - [x] points are added to the players total score
 // - [x] The player is not aware of how much the crystals are worth until the crystal is clicked (they won't be shown anything other than their score, they would have to do mental math to know the crystal values)
-// - [ ] Player wins when the random number and the players score are equal. 
-// - [ ] The player loses if thier score is higher than the random number
-// - [ ] Game restarts when the player wins or loses
+// - [x] Player wins when the random number and the players score are equal. 
+// - [x] The player loses if their score is higher than the random number
+// - [x] Game restarts when the player wins or loses
 // - [x] At the start of a new game a new random number will be shown
 // - [x] Crystals will have new values that are hidden to the player
 // - [x] player's score and score counter will reset to 0
-// - [ ] Number of games played should be shown, wins and loses
+// - [x] Number of games played should be shown, wins and loses
 // - [x] Game reset is not dependant on the page being reloaded
 // - [x] Random number should be between 19 and 120
 // - [x] Crystals will have a random hidden value between 1-12
 
 // Exta stuff
-// - [ ] Sound for when clicking gem, clink
-// - [ ] Sound at loss
-// - [ ] Sound at win (ff fanfare :3)
-// - [ ] Reset button
+// - [x] Sound for when clicking gem, clink
+// - [x] Sound at loss
+// - [x] Sound at win
+// - [x] Reset button
