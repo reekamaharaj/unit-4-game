@@ -39,11 +39,9 @@ function gem1(){
         score = score + gem1Value;
         $('#score').text(score);
         audioElementGem.play();
-    if (score===0){
+    } if (score===0){
 
-    }
-
-    } else if (score === randomNumber) {
+    } if (score === randomNumber) {
         gameWin();
     } else {
         gameLose();
@@ -56,11 +54,9 @@ function gem2(){
         $('#score').text(score);
         audioElementGem.play();
 
-    if (score===0){
+    } if (score===0){
             
-    }
-
-    } else if (score === randomNumber) {
+    } if (score === randomNumber) {
         gameWin();
     } else {
         gameLose();
@@ -73,11 +69,9 @@ function gem3(){
         $('#score').text(score);
         audioElementGem.play();
 
-    if (score===0){
-            
-    }
+    } if (score===0){
 
-    } else if (score === randomNumber) {
+    } if (score === randomNumber) {
         gameWin();
     } else {
         gameLose();
@@ -89,12 +83,10 @@ function gem4(){
         score = score + gem4Value;
         $('#score').text(score);
         audioElementGem.play();
-    
-    if (score===0){
+    } if (score===0){
         
-    }
 
-    } else if (score === randomNumber) {
+    } if (score === randomNumber) {
         gameWin();
 
     } else {
@@ -124,7 +116,6 @@ function gameWin() {
     win++;
     gamesPlayed++;
     reset();
-    
 }
 
 function gameLose(){
