@@ -40,26 +40,50 @@ $(document).ready(function(){
 //functions
 function gem1(){
     if (score < randomNumber){
-        
+        score = score + gem1Value;
 
     } else if (score === randomNumber) {
-
+        gameWin();
     } else {
-
+        gameLose();
     }
     console.log(gem1Value);
 }
 
 function gem2(){
     console.log(gem2Value);
+    if (score < randomNumber){
+        score = score + gem2Value;
+
+    } else if (score === randomNumber) {
+        gameWin();
+    } else {
+        gameLose();
+    }
 }
 
 function gem3(){
     console.log(gem3Value);
+    if (score < randomNumber){
+        score = score + gem3Value;
+
+    } else if (score === randomNumber) {
+        gameWin();
+    } else {
+        gameLose();
+    }
 }
 
 function gem4(){
     console.log(gem4Value);
+    if (score < randomNumber){
+        score = score + gem4Value;
+
+    } else if (score === randomNumber) {
+        gameWin();
+    } else {
+        gameLose();
+    }
 }
 
 function gameStart(){
@@ -76,6 +100,14 @@ function gameStart(){
     console.log("start");
 }
 
+// function gameWin() {
+
+// }
+
+// function gameLose(){
+
+// }
+
 function reset(){
     console.log("reset");
     score = 0;
@@ -84,6 +116,7 @@ function reset(){
     gem2Value = 0;
     gem3Value = 0;
     gem4Value = 0;
+}
 
 function pickRandom(min, max){
     return Math.floor(Math.random() * (max - min) + min);
@@ -113,4 +146,3 @@ function pickRandom(min, max){
 // - [ ] Sound at loss
 // - [ ] Sound at win (ff fanfare :3)
 // - [ ] Reset button
-
