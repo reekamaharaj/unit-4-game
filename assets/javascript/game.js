@@ -26,10 +26,6 @@ audioElementGem.setAttribute("src", "assets/sounds/noisecreations_SFX-NCFREE02_F
 $(document).ready(function(){
     $("#play").click(gameStart);
     $("#reset").click(reset);
-    $("#gem1").click(gem1);
-    $("#gem2").click(gem2);
-    $("#gem3").click(gem3);
-    $("#gem4").click(gem4);
     $('#randomNumber').text(randomNumber);
     $('#score').text(score);
     $('#win').text(win);
@@ -43,6 +39,9 @@ function gem1(){
         score = score + gem1Value;
         $('#score').text(score);
         audioElementGem.play();
+    if (score===0){
+
+    }
 
     } else if (score === randomNumber) {
         gameWin();
@@ -57,6 +56,10 @@ function gem2(){
         $('#score').text(score);
         audioElementGem.play();
 
+    if (score===0){
+            
+    }
+
     } else if (score === randomNumber) {
         gameWin();
     } else {
@@ -70,6 +73,10 @@ function gem3(){
         $('#score').text(score);
         audioElementGem.play();
 
+    if (score===0){
+            
+    }
+
     } else if (score === randomNumber) {
         gameWin();
     } else {
@@ -82,9 +89,14 @@ function gem4(){
         score = score + gem4Value;
         $('#score').text(score);
         audioElementGem.play();
+    
+    if (score===0){
+        
+    }
 
     } else if (score === randomNumber) {
         gameWin();
+
     } else {
         gameLose();
     }
@@ -101,6 +113,10 @@ function gameStart(){
     $('#win').text(win);
     $('#loss').text(loss);
     $('#gamesPlayed').text(gamesPlayed);
+    $("#gem1").click(gem1);
+    $("#gem2").click(gem2);
+    $("#gem3").click(gem3);
+    $("#gem4").click(gem4);
 }
 
 function gameWin() {
@@ -120,6 +136,7 @@ function gameLose(){
 
 function reset(){
     score = 0;
+    randomNumber = 0;
     gameStart();
 }
 
