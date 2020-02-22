@@ -1,111 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/output.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Tomorrow&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <title>Crystal Collector Game</title>
-</head>
-<body class="p-4 bg-black">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="assets/css/output.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Tomorrow&display=swap" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <title>Crystal Collector Game</title>
+    </head>
 
-    <div class="flex flex-wrap -mx-1 overflow-hidden p-4">
+    <body class="text-gray-200 leading-normal tracking-wider bg-cover bg-blue-900">
+        <div class="max-w-4xl flex items-center h-auto flex-wrap mx-auto my-24">
+            <div class="w-full w-3/5 rounded-lg shadow-2xl bg-white opacity-75 mx-6">
+                <div class="p-4 text-center">
+                    <div class="block shadow-xl mx-auto -mt-16 h-24 w-full bg-cover bg-center bg-blue-400 text-3xl font-bold rounded-lg">
+                        Crystal Collector Game
+                    </div>
 
-        <div class="my-1 px-5 w-full overflow-hidden text-white text-center border-solid border-white border-4 text-4xl">
-            <h1>Crystal Collector</h1>
-        </div>
+                    <div class="">
+                        <div class="flex flex-wrap w-1/2">
+                            <p class="px-5 pt-5 text-blue-900 text-sm text-left">
+                                You are out on an adventure and you have run low
+                                on food and water. You look in your coin purse
+                                only to find that you have nothing! You stop at
+                                the first tavern you see and ask the owner how
+                                much you would need for a decent meal. He says
+                                that he would gift you lodging and food for the
+                                night if you would do something for him. But its
+                                a little tricky. You agree. <br/><br/>
 
-        <div class="my-1 px-4 w-full overflow-hidden text-white border-solid border-white border-4 p-4 text-sm">
-            <p>You are out on an adventure and you have run low on food and water. You look in your coin purse only to find that you have nothing! You stop at the first tavern you see and ask the owner how much you would need for a decent meal. He says that he would gift you lodging and food for the night if you would do something for him. But its a little tricky. You agree. <br> <br>
-    
-            The owner gives you a pouch. The pouch needs to be filled with an exact amount of gems. Any amount over and the pouch will disappear and all gems will be lost! You will then have to come back to the owner to get a new pouch and try again with a new amount. <br> <br>
-                
-            The owner tells you that you can find four different gems around town, but he isn't sure how much each is worth. </p> 
-        </div>
+                                The owner gives you a pouch. The pouch needs to
+                                be filled with an exact amount of gems. Any
+                                amount over and the pouch will disappear and all
+                                gems will be lost! You will then have to come
+                                back to the owner to get a new pouch and try
+                                again with a new amount. <br/><br/>
 
-        <div class="flex flex-wrap -mx-1 overflow-hidden text-white p-3">
+                                The owner tells you that you can find four
+                                different gems around town, but he isn't sure
+                                how much each is worth.
+                            </p>
+                        </div>
 
-            <div class="my-1 px-5 w-1/2 overflow-hiddenborder-solid border-white border-2 p-4">
+                        <div class="flex flex-wrap w-1/2">
+                            <h2 class="px-5 pt-5 text-2xl text-blue-800">
+                                How to play:
+                            </h2>
+                            <p class="px-5 py-2 text-blue-900 text-sm text-left">
+                                At the start of the game a number will be shown. Click the picture of the crystals to add them to your pouch. You need to get your score to equal the number shown at the start of the game. If your score is more than the number, you will lose. Each crystal has a different value, which you will not know until you've clicked one. Every new game will change the number to match as well as the value of each crystal.
+                            </p>
+                        </div>
 
-                <h2 class="text-2xl text-center">How to play:</h2>
-                <p class="text-sm"> At the start of the game a number will be shown.
-                Click the picture of the crystals to add them to your pouch. You need to get your score to equal the number shown at the start of the game. If your score is more than the number, you will lose. 
-            
-                Each crystal has a different value, which you will not know until you've clicked one. 
-            
-                Every new game will change the number to match as well as the value of each crystal. </p>
+                        <div class="w-full overflow-hidden p-4 text-center">
+                            <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-6 rounded-full mt-2 mr-10 cursor-pointer" id="play"> Play </button>
+                            <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full cursor-pointer" id="reset"> Reset </button>
+                        </div>
 
-                <div class="w-full overflow-hidden p-4 text-center">
-                    <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-6 rounded-full mt-2 mr-10 cursor-pointer" id="play">
-                        Play
-                    </button>
-                    <button class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full cursor-pointer" id="reset">
-                        Reset
-                    </button>
+                        <div class="my-1 px-5 w-1/2 overflow-hidden p-4 text-blue-800">
+                            <div class="flex flex-wrap overflow-hidden text-sm">
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4"> Goal: </div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4" id="randomNumber"></div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4"> Score: </div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4" id="score"></div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center"> Win: </div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="win"></div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center"> Loss: </div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="loss"></div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center"> Games played: </div>
+
+                                <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="gamesPlayed"></div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
+                                    <img src="assets/images/opal.png" class="cursor-pointer" alt="bluegem" width="80" id="gem1"/>
+                                </div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
+                                    <img src="assets/images/yellow.png" class="cursor-pointer" alt="yellowgem" width="80" id="gem2"/>
+                                </div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
+                                    <img src="assets/images/purple crystal.png" class="cursor-pointer" alt="purple" width="80" id="gem3"/>
+                                </div>
+
+                                <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
+                                    <img src="assets/images/diamond.png" class="cursor-pointer" alt="diamond" width="80" id="gem4"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-          
-            <div class="my-1 px-5 w-1/2 overflow-hidden border-solid border-white border-2 p-4">
-
-                <div class="flex flex-wrap overflow-hidden text-sm">
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4">
-                        Goal: 
-                    </div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4" id="randomNumber"></div>
-                  
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4">
-                        Score: 
-                    </div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4" id="score"></div>
-                  
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center">
-                        Win: 
-                    </div>
-
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="win"></div>
-
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center">
-                        Loss: 
-                    </div>
-
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="loss"></div>
-
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center">
-                        Games played:
-                    </div>
-
-                    <div class="my-1 px-5 w-1/6 overflow-hidden p-4 text-center" id="gamesPlayed"></div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
-                        <img src="assets/images/opal.png" class="cursor-pointer" alt="bluegem" width="80" id="gem1">
-                    </div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
-                        <img src="assets/images/yellow.png" class="cursor-pointer" alt="yellowgem" width="80" id="gem2">
-                    </div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
-                        <img src="assets/images/purple crystal.png" class="cursor-pointer" alt="purple" width="80" id="gem3">
-                    </div>
-
-                    <div class="my-1 px-5 w-1/4 overflow-hidden p-4 inline-flex">
-                        <img src="assets/images/diamond.png" class="cursor-pointer" alt="diamond" width="80" id="gem4">
-                    </div>
-                  
-                </div>
-                
-            </div>
-          
         </div>
-      
-    </div>
-
-    
-</body>
+    </body>
 </html>
