@@ -26,18 +26,13 @@ audioElementGem.setAttribute("src", "assets/sounds/noisecreations_SFX-NCFREE02_F
 $(document).ready(function(){
     $("#play").click(gameStart);
     $("#reset").click(reset);
-    $('#randomNumber').text(randomNumber);
-    $('#score').text(score);
-    $('#win').text(win);
-    $('#loss').text(loss);
-    $('#gamesPlayed').text(gamesPlayed);
 });
 
 //functions
 function gem1(){
     if (score < randomNumber){
         score = score + gem1Value;
-        $('#score').text(score);
+        $('#score').text("Score: " + score);
         audioElementGem.play();
     if (score===0){
 
@@ -53,7 +48,7 @@ function gem1(){
 function gem2(){
     if (score < randomNumber){
         score = score + gem2Value;
-        $('#score').text(score);
+        $('#score').text("Score: " + score);
         audioElementGem.play();
 
     if (score===0){
@@ -70,7 +65,7 @@ function gem2(){
 function gem3(){
     if (score < randomNumber){
         score = score + gem3Value;
-        $('#score').text(score);
+        $('#score').text("Score: " + score);
         audioElementGem.play();
 
     if (score===0){
@@ -87,7 +82,7 @@ function gem3(){
 function gem4(){
     if (score < randomNumber){
         score = score + gem4Value;
-        $('#score').text(score);
+        $('#score').text("Score: " + score);
         audioElementGem.play();
     
     if (score===0){
@@ -108,11 +103,11 @@ function gameStart(){
     gem2Value = pickRandom(1, 13);
     gem3Value = pickRandom(1, 13);
     gem4Value = pickRandom(1, 13);
-    $('#randomNumber').text(randomNumber);
-    $('#score').text(score);
-    $('#win').text(win);
-    $('#loss').text(loss);
-    $('#gamesPlayed').text(gamesPlayed);
+    $('#randomNumber').text("Goal: " + randomNumber);
+    $('#score').text("Score: " + score);
+    $('#win').text("Win: " + win);
+    $('#loss').text("Loss: " + loss);
+    $('#gamesPlayed').text("# Played: " + gamesPlayed);
     $("#gem1").click(gem1);
     $("#gem2").click(gem2);
     $("#gem3").click(gem3);
