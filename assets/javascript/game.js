@@ -10,6 +10,8 @@ let gem2Value = 0;
 let gem3Value = 0;
 let gem4Value = 0;
 
+let gameIsRunning = false;
+
 var playButton;
 var resetButton;
 
@@ -24,9 +26,16 @@ audioElementGem.setAttribute("src", "assets/sounds/noisecreations_SFX-NCFREE02_F
 //calling functions for game play
 
 $(document).ready(function(){
-    $("#play").click(gameStart);
-    $("#reset").click(reset);
+    $("#play").click(reset);
 });
+
+function checkIfWinOrLose() {
+    if (score === randomNumber) {
+        gameWin();
+    } else if (score > randomNumber) {
+        gameLose();
+    }
+}
 
 //functions
 function gem1(){
@@ -34,15 +43,9 @@ function gem1(){
         score = score + gem1Value;
         $('#score').text("Score: " + score);
         audioElementGem.play();
-    if (score===0){
-
     }
 
-    } else if (score === randomNumber) {
-        gameWin();
-    } else {
-        gameLose();
-    }
+    checkIfWinOrLose();
 }
 
 function gem2(){
@@ -50,16 +53,9 @@ function gem2(){
         score = score + gem2Value;
         $('#score').text("Score: " + score);
         audioElementGem.play();
-
-    if (score===0){
-            
     }
 
-    } else if (score === randomNumber) {
-        gameWin();
-    } else {
-        gameLose();
-    }
+    checkIfWinOrLose();
 }
 
 function gem3(){
@@ -67,16 +63,9 @@ function gem3(){
         score = score + gem3Value;
         $('#score').text("Score: " + score);
         audioElementGem.play();
-
-    if (score===0){
-            
     }
 
-    } else if (score === randomNumber) {
-        gameWin();
-    } else {
-        gameLose();
-    }
+    checkIfWinOrLose();
 }
 
 function gem4(){
@@ -84,17 +73,17 @@ function gem4(){
         score = score + gem4Value;
         $('#score').text("Score: " + score);
         audioElementGem.play();
-    
-    if (score===0){
-        
     }
 
-    } else if (score === randomNumber) {
-        gameWin();
+    checkIfWinOrLose();
+}
 
-    } else {
-        gameLose();
-    }
+function setup() {
+    $("#gem1").click(gem1);
+    $("#gem2").click(gem2);
+    $("#gem3").click(gem3);
+    $("#gem4").click(gem4);
+    gameIsRunning = true;
 }
 
 function gameStart(){
@@ -108,10 +97,10 @@ function gameStart(){
     $('#win').text("Win: " + win);
     $('#loss').text("Loss: " + loss);
     $('#gamesPlayed').text("# Played: " + gamesPlayed);
-    $("#gem1").click(gem1);
-    $("#gem2").click(gem2);
-    $("#gem3").click(gem3);
-    $("#gem4").click(gem4);
+
+    if (!gameIsRunning) {
+        setup();
+    }
 }
 
 function gameWin() {
