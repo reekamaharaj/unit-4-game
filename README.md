@@ -4,6 +4,8 @@ In this javascript game, a randomly generated number will be displayed when a ne
 
 The game will also keep track of games played, wins and losses. These are stored locally and will reset if the page is reloaded. 
 
+![](assets/images/crystalGamePlay.gif)
+
 ## Tech Used
 - Tailwind CSS
 - Visual Studios
