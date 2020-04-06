@@ -13,10 +13,10 @@ The game will also keep track of games played, wins and losses. These are stored
 
 ## Audio and IMG sources
 
-[Get gem audio file src](https://www.zapsplat.com/music/)ring-flappy-bird-tribute-coin-success-checkpoint-retro/
-[Win audio file src](https://www.zapsplat.com/music/arcade-game-slot-machine-jackpot-tone-1-short/)
-[Lose audio file src](https://www.zapsplat.com/music/)cartoon-fail-trumpet-wah-wah-wah-to-portray-a-loser-or-failure-version-2/
-[Background Img src](http://www.heropatterns.com/)
+- [Get gem audio file src](https://www.zapsplat.com/music/ring-flappy-bird-tribute-coin-success-checkpoint-retro/)
+- [Win audio file src](https://www.zapsplat.com/music/arcade-game-slot-machine-jackpot-tone-1-short/)
+- [Lose audio file src](https://www.zapsplat.com/music/)cartoon-fail-trumpet-wah-wah-wah-to-portray-a-loser-or-failure-version-2/
+- [Background Img src](http://www.heropatterns.com/)
 
 ## Role in App Development
 Created crystal images, styled the app and coded the game mechanics.
