@@ -1,5 +1,7 @@
 # Gem Collector
+Very basic math game. 
 
+## How to play
 In this javascript game, a randomly generated number will be displayed when a new game is initiated. The value of each gem is unknown to the player. Gem values are randomly generated for each game. When the player clicks on a gem, the player's score will increase by the value of the gem. To win, the player needs to get their score to equal the random number that was generated when the game started. The player will lose if their score is greater than the generated number.
 
 The game will also keep track of games played, wins and losses. These are stored locally and will reset if the page is reloaded. 
